@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>DivaglamKreation | Faith. Flow. Flourish.</title>
+
+  <style>
+    :root {
+      --cream: #F7F1E8;
+      --soft-cream: #FFF9F1;
+      --coffee: #4B362A;
+      --brown: #7A5145;
+      --gold: #D79B3B;
+      --rust: #BF533B;
+      --teal: #2D6869;
+      --rose: #A13D4E;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--cream);
+      color: var(--coffee);
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 28px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--soft-cream);
+      border-bottom: 1px solid rgba(75, 54, 42, 0.12);
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 0.04em;
+    }
+
+    nav a {
+      color: var(--coffee);
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 90px 8% 80px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top left, rgba(215, 155, 59, 0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(191, 83, 59, 0.14), transparent 35%),
+        var(--cream);
+    }
+
+    .eyebrow {
+      color: var(--brown);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.78rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      line-height: 1.1;
+      margin-bottom: 22px;
+      color: var(--coffee);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 34px;
+      font-size: 1.15rem;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s ease;
+    }
+
+    .button.primary {
+      background: var(--coffee);
+      color: var(--soft-cream);
+    }
+
+    .button.secondary {
+      border: 1px solid var(--coffee);
+      color: var(--coffee);
+      background: transparent;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--soft-cream);
+      border: 1px solid rgba(75, 54, 42, 0.12);
+      border-radius: 24px;
+      padding: 30px;
+      min-height: 240px;
+      box-shadow: 0 10px 30px rgba(75, 54, 42, 0.06);
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      color: var(--brown);
+    }
+
+    .card p {
+      font-size: 1rem;
+    }
+
+    .quote-band {
+      background: var(--coffee);
+      color: var(--soft-cream);
+      text-align: center;
+      padding: 70px 8%;
+    }
+
+    .quote-band p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.45rem;
+      line-height: 1.6;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: var(--soft-cream);
+      border-radius: 28px;
+      padding: 38px;
+      border: 1px solid rgba(75, 54, 42, 0.12);
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+    }
+
+    .shop-note {
+      background: rgba(215, 155, 59, 0.18);
+      border-left: 5px solid var(--gold);
+      padding: 24px;
+      border-radius: 18px;
+      margin-top: 24px;
+    }
+
+    .email-section {
+      text-align: center;
+      background: var(--soft-cream);
+      border-top: 1px solid rgba(75, 54, 42, 0.12);
+      border-bottom: 1px solid rgba(75, 54, 42, 0.12);
+    }
+
+    .email-section p {
+      max-width: 620px;
+      margin: 0 auto 26px;
+    }
+
+    footer {
+      padding: 34px 8%;
+      text-align: center;
+      font-size: 0.92rem;
+      color: var(--brown);
+    }
+
+    @media (max-width: 850px) {
+      header {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      nav a {
+        margin: 0 10px;
+      }
+
+      .cards,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 55px 7%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">DK DivaglamKreation</div>
+    <nav>
+      <a href="#shop">Shop</a>
+      <a href="#journals">Journals</a>
+      <a href="#about">About</a>
+      <a href="#glowlist">Glowlist</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="eyebrow">Faith-rooted stationery & gentle encouragement</div>
+
+      <h1>Faith. Flow. Flourish.</h1>
+
+      <p>
+        DivaglamKreation is where faith, creativity, and gentle encouragement meet —
+        through journals, stickers, and seasonal pieces made to help you feel grounded,
+        inspired, and softly reminded of who you are becoming.
+      </p>
+
+      <div class="button-row">
+        <a class="button primary" href="#shop">Explore the Shop</a>
+        <a class="button secondary" href="#glowlist">Join the Glowlist</a>
+      </div>
+    </section>
+
+    <section id="shop">
+      <div class="section-title">
+        <h2>Made for soft resets and meaningful moments</h2>
+        <p>
+          Simple, soulful pieces designed to bring beauty, reflection, and encouragement
+          into your everyday rhythm.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Reset Journals</h3>
+          <p>
+            Guided pages for quiet reflection, prayer, clarity, and becoming.
+            Perfect for seasonal resets and gentle daily check-ins.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Faith Stickers</h3>
+          <p>
+            Encouraging sticker designs made for planners, journals, care packages,
+            laptops, notebooks, and thoughtful gifts.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Glowmail Minis</h3>
+          <p>
+            Small encouragement pieces with a heartfelt message —
+            made to tuck into orders, gifts, journals, and everyday reminders.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="quote-band">
+      <p>
+        “A gentle reminder can become the little light someone carries through the day.”
+      </p>
+    </div>
+
+    <section id="journals" class="about">
+      <div>
+        <h2>For the woman becoming, rebuilding, and blooming softly.</h2>
+        <p>
+          DivaglamKreation creates stationery and digital pieces for quiet growth.
+          Each product is designed to feel calm, useful, beautiful, and rooted in purpose.
+        </p>
+
+        <div class="shop-note">
+          Current focus: Summer Glow reset journals, gentle faith stationery,
+          printable encouragement pieces, and cozy creative tools.
+        </div>
+      </div>
+
+      <div class="about-box">
+        <h3>Shop themes</h3>
+        <p>
+          Faith resets, soft routines, journaling prompts, seasonal glow collections,
+          affirmation cards, stickers, and creative pieces that feel personal and giftable.
+        </p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <h2>Behind the Glow</h2>
+        <p>
+          DGK is built with heart — honoring faith, creativity, stillness, and the beauty
+          of growing one meaningful piece at a time.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Faith</h3>
+          <p>
+            Rooted in trust, prayer, hope, and gentle encouragement for real-life seasons.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Flow</h3>
+          <p>
+            Designed to support calm routines, creative rhythm, and peaceful productivity.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Flourish</h3>
+          <p>
+            Made to help you grow with grace, beauty, and steady intention.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="glowlist" class="email-section">
+      <h2>Join the Glowlist</h2>
+      <p>
+        Get gentle notes, new product updates, seasonal launches, and quiet encouragement
+        from DivaglamKreation.
+      </p>
+
+      <a class="button primary" href="mailto:youremail@example.com">
+        Email Me
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 DivaglamKreation. Faith. Flow. Flourish.
+  </footer>
+
+</body>
+</html>

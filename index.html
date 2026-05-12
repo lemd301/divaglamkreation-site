@@ -1,94 +1,34 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="DivaglamKreation offers gentle journals, stickers, and faith printables for reflection, encouragement, and seasonal creativity." />
-    <title>DivaglamKreation | Gentle tools for faith and reflection</title>
-    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
-    <style>
-      :root { --cream:#f7f1ea; --card:#f1e9df; --coffee:#4b362a; --taupe:#7a6558; --gold:#c9a85d; --soft-gold:#d7bb76; --white:#fffaf3; }
-      * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
-      body { margin: 0; background: var(--cream); color: var(--coffee); font-family: Georgia, "Times New Roman", serif; }
-      .page-shell { width: min(100%, 980px); margin: 0 auto; padding: 30px 22px 0; }
-      .site-header { text-align: center; padding: 0 0 24px; }
-      .brand { color: var(--coffee); font-size: clamp(2rem, 6vw, 3.6rem); text-decoration: none; line-height: 1; }
-      .site-header p, footer p { margin: 10px 0 0; font-family: Arial, sans-serif; letter-spacing: 0.18em; color: var(--taupe); }
-      .divider { display: flex; align-items: center; justify-content: center; gap: 14px; color: var(--gold); margin: 18px auto 0; }
-      .divider span { width: 80px; height: 1px; background: var(--gold); }
-      .hero img, .about img { display: block; width: 100%; border-radius: 34px; object-fit: cover; box-shadow: 0 20px 60px rgba(75, 54, 42, 0.08); }
-      .hero img { aspect-ratio: 16 / 9; object-position: center; }
-      .hero-copy { text-align: center; max-width: 700px; margin: 30px auto 0; }
-      h1, h2, h3, p { margin-top: 0; }
-      h1 { font-size: clamp(2.3rem, 7vw, 4.4rem); line-height: 1.12; font-weight: 400; margin-bottom: 18px; }
-      .hero-copy p, .product-card p, .about-copy p { font-family: Arial, sans-serif; color: var(--taupe); line-height: 1.55; }
-      .hero-copy p { font-size: clamp(1.05rem, 3vw, 1.35rem); max-width: 570px; margin: 0 auto 24px; }
-      .button { display: inline-flex; align-items: center; gap: 16px; background: var(--gold); color: var(--white); border-radius: 999px; padding: 15px 38px; text-decoration: none; font-family: Arial, sans-serif; font-weight: 700; box-shadow: 0 14px 28px rgba(201,168,93,.18); transition: transform .2s ease, background .2s ease; }
-      .button:hover, .product-card:hover { transform: translateY(-2px); }
-      .button:hover { background: var(--soft-gold); }
-      .begin { padding: 30px 0 44px; }
-      .begin h2, .about-copy h2 { text-align: center; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; font-weight: 400; margin: 28px 0 24px; }
-      .card-grid { display: grid; gap: 18px; }
-      .product-card { display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 24px; min-height: 150px; padding: 24px 34px; background: rgba(241,233,223,.82); color: var(--coffee); text-decoration: none; border-radius: 18px; transition: transform .2s ease, box-shadow .2s ease; }
-      .product-card:hover { box-shadow: 0 18px 44px rgba(75,54,42,.08); }
-      .card-art { font-size: 3.6rem; color: var(--gold); text-align: center; }
-      .product-card h3 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 400; margin-bottom: 8px; }
-      .product-card p { margin-bottom: 0; font-size: 1.08rem; }
-      .arrow { color: var(--gold); font-size: 2.6rem; }
-      .about { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 42px; padding-bottom: 42px; }
-      .about img { aspect-ratio: 4 / 3; object-position: center; }
-      .about-copy h2 { text-align: left; margin-bottom: 8px; }
-      .heart { color: var(--gold); margin-bottom: 18px; }
-      .signature { font-family: Georgia, "Times New Roman", serif !important; font-size: 1.6rem; color: var(--coffee) !important; font-style: italic; }
-      footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 18px 24px; padding: 24px; border-top: 1px solid rgba(201,168,93,.24); }
-      footer p { margin: 0; }
-      footer a { color: var(--coffee); text-decoration: none; font-family: Arial, sans-serif; font-weight: 700; }
-      footer a:hover { color: var(--gold); }
-      @media (max-width: 720px) { .page-shell { padding-inline: 16px; } .product-card { grid-template-columns: 70px 1fr auto; gap: 14px; padding: 22px 18px; } .card-art { font-size: 2.5rem; } .arrow { font-size: 2rem; } .about { grid-template-columns: 1fr; } .about-copy h2, .heart { text-align: center; } }
-    </style>
-  </head>
-  <body>
-    <main class="page-shell">
-      <header class="site-header" aria-label="Site header">
-        <a class="brand" href="#">DivaglamKreation</a>
-        <p>sip. create. inspire.</p>
-        <div class="divider" aria-hidden="true"><span></span><small>♥</small><span></span></div>
-      </header>
-      <section class="hero" aria-labelledby="hero-title">
-        <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1600&q=80" alt="Open notebook with pen and coffee on a soft neutral workspace" />
-        <div class="hero-copy">
-          <h1 id="hero-title">Gentle tools for faith, reflection, and everyday encouragement.</h1>
-          <p>Journals, stickers, and seasonal pieces created to help you pause, reset, and feel softly reminded of who you are becoming.</p>
-          <a class="button" href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener">Explore Summer Glow <span aria-hidden="true">→</span></a>
-        </div>
-      </section>
-      <section class="begin" id="shop" aria-labelledby="begin-title">
-        <div class="divider" aria-hidden="true"><span></span><small>♥</small><span></span></div>
-        <h2 id="begin-title">Where would you like to begin?</h2>
-        <div class="card-grid">
-          <a class="product-card" href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener"><div class="card-art" aria-hidden="true">𓍯</div><div><h3>Grace Notes Journals</h3><p>Thoughtful pages for prayer, reflection, and gentle daily resets.</p></div><span class="arrow" aria-hidden="true">→</span></a>
-          <a class="product-card" href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener"><div class="card-art" aria-hidden="true">✿</div><div><h3>Seasonal Stickers</h3><p>Cozy reminders designed for journals, planners, and everyday moments.</p></div><span class="arrow" aria-hidden="true">→</span></a>
-          <a class="product-card" href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener"><div class="card-art" aria-hidden="true">♡</div><div><h3>Faith Printables</h3><p>Printable encouragement to keep close through every season.</p></div><span class="arrow" aria-hidden="true">→</span></a>
-        </div>
-      </section>
-      <section class="about" aria-labelledby="about-title">
-        <img src="https://images.unsplash.com/photo-1602874801007-bd458bb1b8b6?auto=format&fit=crop&w=1000&q=80" alt="Cream vase and candle styled on a soft neutral surface" />
-        <div class="about-copy">
-          <h2 id="about-title">A Gentle Place to Pause</h2>
-          <div class="heart" aria-hidden="true">♥</div>
-          <p>DivaglamKreation was created as a gentle space for faith, creativity, and reflection — offering thoughtful pieces that encourage rest, journaling, prayer, and quiet inspiration in everyday life.</p>
-          <p class="signature">Thank you for being here. ♡</p>
-        </div>
-      </section>
-      <footer>
-        <p>sip. create. inspire.</p><span aria-hidden="true">|</span><p>♡</p><span aria-hidden="true">|</span>
-        <a href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener">Gumroad</a>
-        <a href="https://www.pinterest.com/Lemd3012/" target="_blank" rel="noopener">Pinterest</a>
-        <a href="https://www.instagram.com/divaglamkreation/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/share/1G9VQrJnaZ/" target="_blank" rel="noopener">Facebook</a>
-        <a href="mailto:divaglamkreation@gmail.com">Email</a>
-      </footer>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DK DivaglamKreation is a faith-rooted creative studio for reset journals, gentle reminder stickers, faith printables, and cozy encouragement." />
+  <title>DK DivaglamKreation | Faith. Flow. Flourish.</title>
+  <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+  <style>
+    :root{--cream:#f7f1ea;--soft:#fffaf3;--card:#f1e9df;--coffee:#4b362a;--cocoa:#7a5145;--taupe:#7a6558;--gold:#c9a85d;--rose:#a13d4e}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top left,rgba(201,168,93,.16),transparent 32%),radial-gradient(circle at bottom right,rgba(161,61,78,.08),transparent 34%),var(--cream);color:var(--coffee);font-family:Georgia,"Times New Roman",serif}.page-shell{width:min(100%,1040px);margin:0 auto;padding:28px 22px 0}.site-header{text-align:center;padding-bottom:28px}.brand{color:var(--coffee);font-size:clamp(2rem,6vw,3.7rem);text-decoration:none;line-height:1;display:inline-block}.brand .dk{color:var(--gold);letter-spacing:.04em}.tagline,.eyebrow,footer p{font-family:Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe)}.tagline{margin:12px 0 0;font-size:.85rem}nav{display:flex;justify-content:center;flex-wrap:wrap;gap:16px 22px;margin-top:18px;font-family:Arial,sans-serif}nav a,footer a{color:var(--coffee);text-decoration:none;font-weight:700}nav a:hover,footer a:hover{color:var(--gold)}.divider{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);margin:18px auto 0}.divider span{width:80px;height:1px;background:var(--gold)}.hero{text-align:center}.hero img,.about img{display:block;width:100%;border-radius:34px;object-fit:cover;box-shadow:0 20px 60px rgba(75,54,42,.09)}.hero img{aspect-ratio:16/9;object-position:center}.hero-copy{max-width:760px;margin:34px auto 0}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.55rem,8vw,5.4rem);line-height:1.05;font-weight:700;margin-bottom:18px}h2{font-size:clamp(2rem,5vw,3.25rem);line-height:1.14;font-weight:400}.eyebrow{font-size:.76rem;font-weight:700;margin-bottom:14px;color:var(--cocoa)}.hero-copy p,.product-card p,.about-copy p,.signature-band p,.section-intro{font-family:Arial,sans-serif;color:var(--taupe);line-height:1.6}.hero-copy p{font-size:clamp(1.05rem,3vw,1.35rem);max-width:650px;margin:0 auto 26px}.button-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;gap:12px;background:var(--coffee);color:var(--soft);border-radius:999px;padding:15px 34px;text-decoration:none;font-family:Arial,sans-serif;font-weight:700;box-shadow:0 14px 28px rgba(75,54,42,.14);transition:.2s}.button.secondary{background:transparent;color:var(--coffee);border:1px solid rgba(75,54,42,.35);box-shadow:none}.button:hover,.product-card:hover{transform:translateY(-2px)}.button:hover{background:var(--cocoa)}.begin,.signature-band,.about{padding:52px 0}.begin h2{text-align:center;margin:28px 0 24px}.section-intro{max-width:650px;margin:-8px auto 28px;text-align:center}.card-grid{display:grid;gap:18px}.product-card{display:grid;grid-template-columns:120px 1fr auto;align-items:center;gap:24px;min-height:150px;padding:24px 34px;background:rgba(255,250,243,.78);color:var(--coffee);text-decoration:none;border:1px solid rgba(201,168,93,.18);border-radius:22px;transition:.2s}.product-card:hover{box-shadow:0 18px 44px rgba(75,54,42,.08)}.card-art{font-size:3.4rem;color:var(--gold);text-align:center}.product-card h3{font-size:clamp(1.65rem,4vw,2.45rem);font-weight:400;margin-bottom:8px}.product-card p{margin-bottom:0;font-size:1.05rem}.arrow{color:var(--gold);font-size:2.4rem}.signature-band{background:rgba(255,250,243,.74);border:1px solid rgba(201,168,93,.22);border-radius:30px;padding:38px 28px;text-align:center;margin-top:20px}.signature-band h2{margin-bottom:12px;font-weight:700}.signature-band p{max-width:680px;margin:0 auto;font-size:1.08rem}.about{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:42px}.about img{aspect-ratio:4/3;object-position:center}.about-copy h2{margin-bottom:10px}.heart{color:var(--gold);margin-bottom:18px}.signature{font-family:Georgia,"Times New Roman",serif!important;font-size:1.6rem;color:var(--coffee)!important;font-style:italic}footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px 22px;padding:28px 18px;border-top:1px solid rgba(201,168,93,.24);text-align:center}.footer-signature{width:100%;font-family:Georgia,"Times New Roman",serif!important;text-transform:none!important;letter-spacing:.02em!important;font-size:1.35rem!important;color:var(--coffee)!important}@media(max-width:720px){.page-shell{padding-inline:16px}.product-card{grid-template-columns:70px 1fr auto;gap:14px;padding:22px 18px}.card-art{font-size:2.4rem}.arrow{font-size:2rem}.about{grid-template-columns:1fr}.about-copy h2,.heart,.about-copy{text-align:center}.signature-band{padding:32px 20px}}
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="#"><span class="dk">DK</span> DivaglamKreation</a>
+      <p class="tagline">Faith. Flow. Flourish.</p>
+      <nav aria-label="Primary navigation"><a href="#shop">Shop</a><a href="#reset">Reset Journals</a><a href="#about">About</a><a href="mailto:divaglamkreation@gmail.com?subject=Join%20the%20Glowlist">Glowlist</a></nav>
+      <div class="divider" aria-hidden="true"><span></span><small>♡</small><span></span></div>
+    </header>
+    <section class="hero" aria-labelledby="hero-title">
+      <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1600&q=80" alt="Open notebook with pen and coffee on a soft neutral workspace" />
+      <div class="hero-copy"><p class="eyebrow">Faith-rooted stationery & gentle encouragement</p><h1 id="hero-title">Soft tools for faith, reflection, and creative becoming.</h1><p>DivaglamKreation is a faith-rooted creative studio for gentle resets, cozy stationery, and everyday encouragement — made to help you pause, realign, and softly remember who you are becoming.</p><div class="button-row"><a class="button" href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener">Shop Summer Glow <span aria-hidden="true">→</span></a><a class="button secondary" href="mailto:divaglamkreation@gmail.com?subject=Join%20the%20Glowlist">Join the Glowlist</a></div></div>
+    </section>
+    <section class="begin" id="shop" aria-labelledby="begin-title">
+      <div class="divider" aria-hidden="true"><span></span><small>♡</small><span></span></div><h2 id="begin-title">Begin with a gentle reset.</h2><p class="section-intro">Choose a path that feels like a quiet breath: a journal page, a sticker reminder, or a faith printable to keep close through the season.</p>
+      <div class="card-grid" id="reset"><a class="product-card" href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener"><div class="card-art" aria-hidden="true">✎</div><div><h3>Reset Journals</h3><p>Guided pages for prayer, reflection, clarity, and soft daily renewal.</p></div><span class="arrow" aria-hidden="true">→</span></a><a class="product-card" href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener"><div class="card-art" aria-hidden="true">✿</div><div><h3>Gentle Reminder Stickers</h3><p>Cozy encouragement for journals, planners, care packages, and everyday places.</p></div><span class="arrow" aria-hidden="true">→</span></a><a class="product-card" href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener"><div class="card-art" aria-hidden="true">♡</div><div><h3>Faith Reset Printables</h3><p>Printable encouragement for quiet moments, prayer corners, and seasonal reflection.</p></div><span class="arrow" aria-hidden="true">→</span></a></div>
+    </section>
+    <section class="signature-band" aria-labelledby="signature-title"><p class="eyebrow">The DGK rhythm</p><h2 id="signature-title">Pour. Pause. Rise.</h2><p>A quiet rhythm for reflection, renewal, and becoming — one gentle reminder, one prayerful page, one faithful step at a time.</p></section>
+    <section class="about" id="about" aria-labelledby="about-title"><img src="https://images.unsplash.com/photo-1602874801007-bd458bb1b8b6?auto=format&fit=crop&w=1000&q=80" alt="Cream vase and candle styled on a soft neutral surface" /><div class="about-copy"><p class="eyebrow">Behind the Glow</p><h2 id="about-title">A gentle place to pause.</h2><div class="heart" aria-hidden="true">♡</div><p>DK DivaglamKreation was created as a soft space for faith, creativity, and reflection — blending journals, stickers, seasonal pieces, and heartfelt encouragement for women becoming with grace.</p><p class="signature">Faith. Flow. Flourish. ♡</p></div></section>
+    <footer><p class="footer-signature"><span style="color:var(--gold);">DK</span> DivaglamKreation</p><p>Faith. Flow. Flourish.</p><span aria-hidden="true">|</span><p>♡</p><span aria-hidden="true">|</span><a href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener">Gumroad</a><a href="https://www.pinterest.com/Lemd3012/" target="_blank" rel="noopener">Pinterest</a><a href="https://www.instagram.com/divaglamkreation/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/share/1G9VQrJnaZ/" target="_blank" rel="noopener">Facebook</a><a href="mailto:divaglamkreation@gmail.com">Email</a></footer>
+  </main>
+</body>
 </html>

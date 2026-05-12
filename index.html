@@ -7,16 +7,7 @@
     <title>DivaglamKreation | Gentle tools for faith and reflection</title>
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
     <style>
-      :root {
-        --cream: #f7f1ea;
-        --card: #f1e9df;
-        --coffee: #4b362a;
-        --taupe: #7a6558;
-        --gold: #c9a85d;
-        --soft-gold: #d7bb76;
-        --white: #fffaf3;
-      }
-
+      :root { --cream:#f7f1ea; --card:#f1e9df; --coffee:#4b362a; --taupe:#7a6558; --gold:#c9a85d; --soft-gold:#d7bb76; --white:#fffaf3; }
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body { margin: 0; background: var(--cream); color: var(--coffee); font-family: Georgia, "Times New Roman", serif; }
@@ -33,33 +24,28 @@
       h1 { font-size: clamp(2.3rem, 7vw, 4.4rem); line-height: 1.12; font-weight: 400; margin-bottom: 18px; }
       .hero-copy p, .product-card p, .about-copy p { font-family: Arial, sans-serif; color: var(--taupe); line-height: 1.55; }
       .hero-copy p { font-size: clamp(1.05rem, 3vw, 1.35rem); max-width: 570px; margin: 0 auto 24px; }
-      .button { display: inline-flex; align-items: center; gap: 16px; background: var(--gold); color: var(--white); border-radius: 999px; padding: 15px 38px; text-decoration: none; font-family: Arial, sans-serif; font-weight: 700; box-shadow: 0 14px 28px rgba(201, 168, 93, 0.18); transition: transform 0.2s ease, background 0.2s ease; }
+      .button { display: inline-flex; align-items: center; gap: 16px; background: var(--gold); color: var(--white); border-radius: 999px; padding: 15px 38px; text-decoration: none; font-family: Arial, sans-serif; font-weight: 700; box-shadow: 0 14px 28px rgba(201,168,93,.18); transition: transform .2s ease, background .2s ease; }
       .button:hover, .product-card:hover { transform: translateY(-2px); }
       .button:hover { background: var(--soft-gold); }
       .begin { padding: 30px 0 44px; }
       .begin h2, .about-copy h2 { text-align: center; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; font-weight: 400; margin: 28px 0 24px; }
       .card-grid { display: grid; gap: 18px; }
-      .product-card { display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 24px; min-height: 150px; padding: 24px 34px; background: rgba(241, 233, 223, 0.82); color: var(--coffee); text-decoration: none; border-radius: 18px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-      .product-card:hover { box-shadow: 0 18px 44px rgba(75, 54, 42, 0.08); }
+      .product-card { display: grid; grid-template-columns: 120px 1fr auto; align-items: center; gap: 24px; min-height: 150px; padding: 24px 34px; background: rgba(241,233,223,.82); color: var(--coffee); text-decoration: none; border-radius: 18px; transition: transform .2s ease, box-shadow .2s ease; }
+      .product-card:hover { box-shadow: 0 18px 44px rgba(75,54,42,.08); }
       .card-art { font-size: 3.6rem; color: var(--gold); text-align: center; }
       .product-card h3 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 400; margin-bottom: 8px; }
       .product-card p { margin-bottom: 0; font-size: 1.08rem; }
       .arrow { color: var(--gold); font-size: 2.6rem; }
-      .about { display: grid; grid-template-columns: 0.9fr 1.1fr; align-items: center; gap: 42px; padding-bottom: 42px; }
+      .about { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 42px; padding-bottom: 42px; }
       .about img { aspect-ratio: 4 / 3; object-position: center; }
       .about-copy h2 { text-align: left; margin-bottom: 8px; }
       .heart { color: var(--gold); margin-bottom: 18px; }
       .signature { font-family: Georgia, "Times New Roman", serif !important; font-size: 1.6rem; color: var(--coffee) !important; font-style: italic; }
-      footer { display: flex; align-items: center; justify-content: center; gap: 24px; padding: 24px; border-top: 1px solid rgba(201, 168, 93, 0.24); }
+      footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 18px 24px; padding: 24px; border-top: 1px solid rgba(201,168,93,.24); }
       footer p { margin: 0; }
-      @media (max-width: 720px) {
-        .page-shell { padding-inline: 16px; }
-        .product-card { grid-template-columns: 70px 1fr auto; gap: 14px; padding: 22px 18px; }
-        .card-art { font-size: 2.5rem; }
-        .arrow { font-size: 2rem; }
-        .about { grid-template-columns: 1fr; }
-        .about-copy h2, .heart { text-align: center; }
-      }
+      footer a { color: var(--coffee); text-decoration: none; font-family: Arial, sans-serif; font-weight: 700; }
+      footer a:hover { color: var(--gold); }
+      @media (max-width: 720px) { .page-shell { padding-inline: 16px; } .product-card { grid-template-columns: 70px 1fr auto; gap: 14px; padding: 22px 18px; } .card-art { font-size: 2.5rem; } .arrow { font-size: 2rem; } .about { grid-template-columns: 1fr; } .about-copy h2, .heart { text-align: center; } }
     </style>
   </head>
   <body>
@@ -69,7 +55,6 @@
         <p>sip. create. inspire.</p>
         <div class="divider" aria-hidden="true"><span></span><small>♥</small><span></span></div>
       </header>
-
       <section class="hero" aria-labelledby="hero-title">
         <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1600&q=80" alt="Open notebook with pen and coffee on a soft neutral workspace" />
         <div class="hero-copy">
@@ -78,7 +63,6 @@
           <a class="button" href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener">Explore Summer Glow <span aria-hidden="true">→</span></a>
         </div>
       </section>
-
       <section class="begin" id="shop" aria-labelledby="begin-title">
         <div class="divider" aria-hidden="true"><span></span><small>♥</small><span></span></div>
         <h2 id="begin-title">Where would you like to begin?</h2>
@@ -88,7 +72,6 @@
           <a class="product-card" href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener"><div class="card-art" aria-hidden="true">♡</div><div><h3>Faith Printables</h3><p>Printable encouragement to keep close through every season.</p></div><span class="arrow" aria-hidden="true">→</span></a>
         </div>
       </section>
-
       <section class="about" aria-labelledby="about-title">
         <img src="https://images.unsplash.com/photo-1602874801007-bd458bb1b8b6?auto=format&fit=crop&w=1000&q=80" alt="Cream vase and candle styled on a soft neutral surface" />
         <div class="about-copy">
@@ -98,8 +81,14 @@
           <p class="signature">Thank you for being here. ♡</p>
         </div>
       </section>
-
-      <footer><p>sip. create. inspire.</p><span aria-hidden="true">|</span><p>♡</p></footer>
+      <footer>
+        <p>sip. create. inspire.</p><span aria-hidden="true">|</span><p>♡</p><span aria-hidden="true">|</span>
+        <a href="https://lemdo8.gumroad.com/" target="_blank" rel="noopener">Gumroad</a>
+        <a href="https://www.pinterest.com/Lemd3012/" target="_blank" rel="noopener">Pinterest</a>
+        <a href="https://www.instagram.com/divaglamkreation/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/share/1G9VQrJnaZ/" target="_blank" rel="noopener">Facebook</a>
+        <a href="mailto:divaglamkreation@gmail.com">Email</a>
+      </footer>
     </main>
   </body>
 </html>
